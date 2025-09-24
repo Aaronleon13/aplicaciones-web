@@ -94,7 +94,7 @@ main section div {
     text-transform: uppercase;
 }
 .card-footer{
-    height: 76px;
+    height: 56px;
     width: 100%;
     background-color: white;
     margin-top: auto;
@@ -125,4 +125,14 @@ hr {
 .card-footer img {
     width: 30px;
     height: 30px;
+}
+
+.card-footer .social-media{
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+.card-footer .social-media img:hover {
+    filter: drop-shadow( 0 5px 10px rgba(0, 0, 0, 0.8));
+    transition: all 0.5s ease-in-out;
 }
