@@ -17,6 +17,8 @@ body {
     top: 0;
     left: 0;
     width: 100%;
+    background-color: white;
+    z-index: 1;
     
     & nav {
         display: flex;
@@ -54,7 +56,7 @@ body {
     }
 }
 
-main section {
+main #about-me {
    min-height: calc(100vh - 40px);
    display: grid;
    grid-template-columns: repeat(2, 1fr);
@@ -64,7 +66,7 @@ main section {
    max-width: 1200px;
 }
 
-main section div {
+main #about-me div {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,8 +109,9 @@ main section div {
 hr {
     width: 80px;
     height: 2px;
-    background-color: white;
+    background-color: var(--primary-color);
     border: none;
+    margin: 0 auto;
 }
 
 .card-content img {
@@ -195,10 +198,18 @@ footer{
 
 /* Teléfonos pequeños */
  @media (max-width: 550px) {
-    main section{
-        display: grid;
-        grid-template-columns: 1fr;
-    }
+        main #about-me{
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 80px;
+            margin: 80px 0;
+        }
+        .card{
+            width: 97%;
+        }
+        article{
+            width: 96%;
+        }
     } 
 
 /* Teléfonos muy pequeños (opcional) */
