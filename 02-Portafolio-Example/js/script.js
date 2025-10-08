@@ -121,14 +121,28 @@ esIsograma('hello'); // false
 // Por ejemplo, "amor" es un anagrama de "roma".
 
 const sonAnagramas = (palabra1, palabra2) => {
-    const array1 = palabra1.split('').sort();
-    const array2 = palabra2.split('').sort();
-    
+
+    //Agregue el join para poder verificar si array1 es igual a array2
+    // ya que sort devuelve un array y no una cadena de texto
+    // y al comparar un array con otro array siempre devuelve false
+    // incluso si tienen los mismos elementos
+
+    // Convertir las palabras a arrays de letras, ordenarlas y unirlas de nuevo en cadenas
+    const array1 = palabra1.split('').sort().join();
+    const array2 = palabra2.split('').sort().join();
+
+
+    // Verificar si tienen la misma longitud 
+    // Tambien se puede usar palabra1.length !== palabra2.length
+    // pero es menos eficiente
+
     if (array1.length !== array2.length) {
         return console.log(`No son anagramas: ${palabra1} y ${palabra2}`);
     }
 
-    if (array1.join() === array2.join()) {
+    // El join fue agregado en las lineas 94 y 95
+    // a si la compración es mas precisa
+    if (array1 === array2) {
         return console.log(`Son anagramas: ${palabra1} y ${palabra2}`);
     }else{
         return console.log(`No son anagramas: ${palabra1} y ${palabra2}`);
@@ -136,4 +150,4 @@ const sonAnagramas = (palabra1, palabra2) => {
     }
 }
 
-sonAnagramas('amor','roma')
+sonAnagramas('amor','romas')
