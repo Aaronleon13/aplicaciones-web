@@ -1,3 +1,4 @@
+// Constante
 const mensaje = 'Hola mundo desde script.js';
 
 console.log(mensaje.length);
@@ -11,26 +12,28 @@ const numeroPar = 42;
 
 console.log(numeroPar);
 
+// Variable
 let otroMensaje = 'Este es otro mensaje';
 console.log(otroMensaje);
 otroMensaje = 'Mensaje modificado';
 console.log(otroMensaje);
 
 
-
+//Impresión de variables en consola
 const nombre = 'Pedro';
 const edad = 20;
 
 console.log("Hola, mi nombre es " + nombre + " y tengo " + edad + " años.");
 console.log(`Hola, mi nombre es ${nombre} y tengo ${edad} años.`);
 
-
+// Estructuras de control
 if (edad >= 18) {
     console.log(`${nombre} es mayor de edad.`);
 } else {
     console.log(`${nombre} es menor de edad.`);
 }
 
+// Ciclos
 for (let i = 1; i <= mensaje.length; i++) {
     console.log(`Número: ${i}`);
 }
@@ -39,6 +42,7 @@ for (const caracteres of mensaje) {
     console.log(`Letra: ${caracteres}`);
 }
 
+// arreglos
 const array = [1, 2, 3, 4, 5];
 
 array.push(6);
@@ -56,21 +60,80 @@ array.join('-');
 
 console.log(array.join(','));
 
-
+// Funciones
 function saludar(param) {
     console.log(`Esta es una función de saludo: ${param}`);
 }
 
+// Invocación de la función
 saludar('Joaquin el Rey de los PROMPTS');
 
+// Funciones de flecha
 const despedida = (param) => {
     console.log(`Esta es una función de despedida: ${param}`);
 }
 
+// Invocación de la función
 despedida('Ulises Duque de los Prompts');
 
 
+const sumar = (a, b) => {
+    return console.log(a + b);
+    
+}
+
+const sumar2 = (a, b) => a + b;
+
+
+sumar(5, 10);
+sumar2(20, 30);
 
 const name = document.querySelector('.name');
 
 name.textContent = 'Nicolas /';
+
+
+//ISOGRAMA
+// Un isograma es una palabra que no tiene letras repetidas.
+// Por ejemplo, la palabra "lamp" es un isograma, 
+// pero la palabra "hello" no lo es porque tiene dos letras "l".
+
+const esIsograma = (palabra) => {
+    const arrayLetras = [];
+    for (const letra of palabra) {
+        if (arrayLetras.includes(letra)) {
+            return console.log(`No es un isograma: ${palabra}`);
+        }
+        arrayLetras.push(letra);
+        console.log(arrayLetras);
+        
+    }
+    return console.log(`Es un isograma: ${palabra}`);
+    
+}
+
+esIsograma('tomar'); // true
+esIsograma('hello'); // false
+
+//ANAGRAMA
+// Un anagrama es una palabra o frase que se forma
+// reordenando las letras de otra palabra o frase.
+// Por ejemplo, "amor" es un anagrama de "roma".
+
+const sonAnagramas = (palabra1, palabra2) => {
+    const array1 = palabra1.split('').sort();
+    const array2 = palabra2.split('').sort();
+    
+    if (array1.length !== array2.length) {
+        return console.log(`No son anagramas: ${palabra1} y ${palabra2}`);
+    }
+
+    if (array1.join() === array2.join()) {
+        return console.log(`Son anagramas: ${palabra1} y ${palabra2}`);
+    }else{
+        return console.log(`No son anagramas: ${palabra1} y ${palabra2}`);
+        
+    }
+}
+
+sonAnagramas('amor','roma')
