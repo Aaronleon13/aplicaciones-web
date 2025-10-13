@@ -142,6 +142,7 @@ const sonAnagramas = (palabra1, palabra2) => {
 
     // El join fue agregado en las lineas 94 y 95
     // a si la compración es mas precisa
+
     if (array1 === array2) {
         return console.log(`Son anagramas: ${palabra1} y ${palabra2}`);
     }else{
@@ -151,3 +152,62 @@ const sonAnagramas = (palabra1, palabra2) => {
 }
 
 sonAnagramas('amor','romas')
+
+
+//CALLBACKS HELL
+// Un callback es una función que se pasa como argumento a otra función
+// y se ejecuta dentro de esa función.
+const otraFuncion = () => {
+    console.log('Función 2 ejecutada');
+}
+
+const funcion1 = (otraFuncion) => {
+    setTimeout(() => {
+        console.log('Función 1 ejecutada');
+        otraFuncion();
+    }, 5000);
+}
+
+console.log(funcion1(otraFuncion));
+
+
+const hacerPiza = () => {
+    const masa = () => {
+        const hornear = () => {
+            const decorar = () => {
+            }   
+        }
+    }
+}
+
+// Promesas. Las promesas son una forma de manejar operaciones asincrónicas en JavaScript.
+// Una promesa representa un valor que puede estar disponible ahora, en el futuro o nunca.
+
+const promesa = new Promise((resolve, reject) => {
+    const exito = true;
+    if (exito) {
+        resolve('La promesa se cumplió');
+    } else {
+        reject('La promesa se rechazó');
+    }
+});
+
+promesa
+    .then((resultado) => {
+        console.log(resultado);
+    })
+    .catch((error) => {
+        console.log(error);
+    }); 
+
+
+const funcionAsincrona = async (promesa) => {
+    try {
+        const resultado = await promesa;
+        console.log(`Resultado: ${resultado}`);
+    } catch (error) {
+        console.log(`Error: ${error}`);
+    }
+}
+
+funcionAsincrona(promesa);
