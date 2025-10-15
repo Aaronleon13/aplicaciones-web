@@ -196,8 +196,8 @@ promesa
     .then((resultado) => {
         console.log(resultado);
     })
-    .catch((error) => {
-        console.log(error);
+    .catch((err) => {
+        console.log(err);
     }); 
 
 
@@ -211,3 +211,40 @@ const funcionAsincrona = async (promesa) => {
 }
 
 funcionAsincrona(promesa);
+
+
+
+const body = document.querySelector('body header nav a');
+const projectCard = document.querySelector('.project-card');
+const projectCards = document.querySelectorAll('.project-card');
+const sectionId = document.getElementById('projects');
+
+// const body2 = document.getElementsByTagName('body');
+// const byid = document.getElementById('byid');
+// const byclass = document.getElementsByClassName('byclass');
+// const byname = document.getElementsByName('byname');
+
+console.log(body);
+console.log(projectCard);
+console.log(projectCards);
+console.log(sectionId);
+
+
+const buttons = document.querySelectorAll('.project-card button');
+
+console.log(buttons);
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button){
+            projectCards.forEach((card) => {
+               if(card.classList.contains('isActive')){
+                   console.log('Contiene la clase');
+               }else{
+                     card.classList.add('isActive');
+               }
+            });
+        }
+    });
+});
+

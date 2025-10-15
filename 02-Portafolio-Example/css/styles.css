@@ -223,6 +223,22 @@ footer {
   align-items: center;
   justify-content: center;
 }
+   button{
+    margin-top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--secondary-color);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .isActive{
+    border: 2px solid var(--secondary-color);
+    background-color: transparent;
+   }
 
 form{
   display: flex;
@@ -245,6 +261,7 @@ form button{
   transition: background-color 0.3s ease-in-out;
   margin: 0 auto;
 }
+
 
 /* Tablets y pantallas medianas */
 /* @media (max-width: 1024px) {
