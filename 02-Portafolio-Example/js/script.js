@@ -216,7 +216,6 @@ funcionAsincrona(promesa);
 
 const body = document.querySelector('body header nav a');
 const projectCard = document.querySelector('.project-card');
-const projectCards = document.querySelectorAll('.project-card');
 const sectionId = document.getElementById('projects');
 
 // const body2 = document.getElementsByTagName('body');
@@ -231,18 +230,13 @@ console.log(sectionId);
 
 
 const buttons = document.querySelectorAll('.project-card button');
-
-console.log(buttons);
+const projectCards = document.querySelectorAll('.project-card');
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
         if(button){
             projectCards.forEach((card) => {
-               if(card.classList.contains('isActive')){
-                   console.log('No la contiene');
-               }else{
-                     card.classList.add('isActive');
-               }
+                // insertar el codigo aqui.
             });
         }
     });
