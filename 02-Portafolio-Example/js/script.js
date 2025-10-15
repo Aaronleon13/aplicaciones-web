@@ -170,15 +170,15 @@ const funcion1 = (otraFuncion) => {
 
 console.log(funcion1(otraFuncion));
 
-
-const hacerPiza = () => {
-    const masa = () => {
-        const hornear = () => {
-            const decorar = () => {
-            }   
-        }
-    }
-}
+//EJEMPLO DE CALLBACK HELL
+// const hacerPiza = () => {
+//     const masa = () => {
+//         const hornear = () => {
+//             const decorar = () => {
+//             }   
+//         }
+//     }
+// }
 
 // Promesas. Las promesas son una forma de manejar operaciones asincrónicas en JavaScript.
 // Una promesa representa un valor que puede estar disponible ahora, en el futuro o nunca.
