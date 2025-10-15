@@ -239,7 +239,7 @@ buttons.forEach((button) => {
         if(button){
             projectCards.forEach((card) => {
                if(card.classList.contains('isActive')){
-                   console.log('Contiene la clase');
+                   console.log('No la contiene');
                }else{
                      card.classList.add('isActive');
                }
