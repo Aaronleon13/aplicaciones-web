@@ -7,7 +7,7 @@
     <meta name="author" content="Aaron Leon">
     <meta name="keywords" content="portafolio, aplicaciones web, proyectos, desarrollo web, resumen, HTML, CSS, Javascript">
     <link rel="stylesheet" href="css/styles.css">
-    <script defer src="js/script.js"></script>
+    <script type="module" src="js/main.js"></script>
     <title>Aarón León | Portafolio</title>
 </head>
 <body>
@@ -17,7 +17,8 @@
                 <span class="name">AARON LEON /</span>
                 <span>DESARROLLADOR WEB</span>
             </h1>
-            <a href="http://">CONTACTO</a>
+            <a href="#about-me" data-section="about-me">INICIO</a>
+            <a href="#contacto" data-section="contacto">CONTACTO</a>
         </nav>
     </header>
     <main>
@@ -52,7 +53,7 @@
                     <h3>Here’s Who I am & What I do.</h3>
                     <aside>
                         <a href="#">RESUMEN</a>
-                        <a href="#projects">PROJECTS</a>
+                        <a href="#projects" data-section="projects">PROJECTS</a>
                     </aside>
                     <p>
                         The About Me or Profile section of your portfolio, is a short summary about yourself in relation to the type of role you are applying for. In the sample portfolio, the student has highlighted their program, the projects they've worked on and their specific area of interest in their field.
@@ -65,23 +66,23 @@
         <section id="projects">
                 <h2>Mis Proyectos</h2>  
                 <div>
-                    <div class="project-card">
+                    <div class="project-card" data-card='1'>
                         <h3>Proyecto 1</h3>
                         <p>Descripción breve del proyecto 1.</p>
-                        <button>Ver Proyecto</button>
+                        <button data-id="1">Ver Proyecto</button>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-card='2'>
                         <h3>Proyecto 2</h3>
                         <p>Descripción breve del proyecto 2.</p>
-                        <button>Ver Proyecto</button>
+                        <button data-id="2">Ver Proyecto</button>
                     </div>
-                    <div class="project-card">
+                    <div class="project-card" data-card='3'>
                         <h3>Proyecto 3</h3>
                         <p>Descripción breve del proyecto 3.</p>
-                        <button>Ver Proyecto</button>
+                        <button data-id="3">Ver Proyecto</button>
                     </div>
         </section>
-        <section>
+        <section id="contacto">
             <form role="form" id="" class="" action="" aria-label="Formulario de contacto">
                 <h2>Contacto</h2>
                 <div>
