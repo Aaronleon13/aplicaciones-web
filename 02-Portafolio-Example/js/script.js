@@ -228,5 +228,20 @@ console.log(projectCard);
 console.log(sectionId);
 
 
+<<<<<<< HEAD
 
+=======
+const buttons = document.querySelectorAll('.project-card button');
+const projectCards = document.querySelectorAll('.project-card');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', () => {
+        if(button){
+            projectCards.forEach((card) => {
+                // insertar el codigo aqui.
+            });
+        }
+    });
+});
+>>>>>>> 61ab46c164fcabbf6836107e91794e7a7a410cee
 
