@@ -1,6 +1,13 @@
 :root {
   --primary-color: #3498db;
   --secondary-color: #2ecc71;
+  --backgroud-color: #f3f3f3;
+}
+
+.dark-theme {
+  --primary-color: #fff;
+  --secondary-color: #000; 
+  --background-color: #030303;
 }
 * {
   box-sizing: border-box;
@@ -11,6 +18,8 @@
 
 body {
   font-family: Arial, sans-serif;
+  background: var(--background-color);
+  transition: all 0.5s ease-in-out;
 }
 
 #menu {
