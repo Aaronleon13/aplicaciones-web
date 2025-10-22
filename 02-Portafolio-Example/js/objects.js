@@ -25,7 +25,7 @@ const alumnos = [
 
 console.log(alumno.nombre);
 
-const filterAlumnos = alumnos.map(function(alumno) {
+const filterAlumnos = alumnos.filter(function(alumno) {
     return alumno.edad > 24;
 });
 
