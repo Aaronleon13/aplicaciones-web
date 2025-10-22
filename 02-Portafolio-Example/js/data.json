@@ -1,0 +1,12 @@
+[
+    {
+        "alumno": "Aaron León",
+        "carrera": "Desarrollo de Aplicaciones Web",
+        "correo": "aaron.leon@example.com"
+    },
+    {
+        "alumno": "María Gómez",
+        "carrera": "Diseño Gráfico",
+        "correo": "maria.gomez@example.com"
+    }
+]

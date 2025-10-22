@@ -1,7 +1,7 @@
 const selectedTheme = document.querySelector('#theme');
 const body = document.querySelector('body');
 
-const savedTheme = 'dark';
+// const savedTheme = 'dark';
 
 const innitialTheme = () => {
     if (selectedTheme.value === 'dark') {
