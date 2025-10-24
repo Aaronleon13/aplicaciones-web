@@ -1,14 +1,16 @@
 const selectedTheme = document.querySelector('#theme');
 const body = document.querySelector('body');
 
-// const savedTheme = 'dark';
+const savedTheme = localStorage.getItem('theme');
 
 const innitialTheme = () => {
-    if (selectedTheme.value === 'dark') {
+    if (savedTheme === 'dark') {
         body.classList.add('dark-theme');
+        selectedTheme.value = 'dark';
     }
-    if (selectedTheme.value === 'light') {
+    if (savedTheme === 'light') {
         body.classList.remove('dark-theme');
+        selectedTheme.value = 'light';
     }
 };
 
